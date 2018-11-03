@@ -1,11 +1,12 @@
-/* html,
+html,
 body {
   height: 100%;
 }
 
+
 body {
   text-align: center;
-  background-image: url("../images/tacky.jpg");
+  background-image: url("../images/wheat.png");
 }
 
 #wrapper {
@@ -13,7 +14,7 @@ body {
   height: 95%;
   box-sizing: border-box;
   margin: 2.5% auto;
-  background-color: #fff17a;
+  background-color: #85144b;
 }
 
 #sub-wrapper {
@@ -38,10 +39,10 @@ img {
 
 h1 {
   padding-top: 2.5%;
-  font-family: Geo, sans-serif;
+  font-family: Lobster;
   font-size: 6.5em;
   font-weight: bold;
-  color: blue;
+  color: #AAAAAA;
 }
 
 h2 {
@@ -56,11 +57,11 @@ h3 {
 
 #start {
   margin-top: 10%;
-  background: pink;
-  border: 2px solid blue;
+  background: #AAAAAA;
+  border: 2px solid #AAAAAA;
 }
 
 button:hover {
-  background: pink;
-  border: 2px solid blue;
-} */
+  background: #AAAAAA;
+  border: 2px solid #AAAAAA;
+}

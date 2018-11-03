@@ -9,18 +9,16 @@
 </head>
 
 <body>
+  <!-- made three containers: one for the start, another for displaying the questions and a third for displaying the results -->
 	<div id="container1">
 		<h1 class="title">Wine Trivia - Test Your Knowledge!</h1>
-		<button id=start_button>Start</button>
+		<button id="startButton">Start</button>
 	</div>
 
 	<div id="container2">
 		<h1 class="title">Answer the wine related questions in the alloted time!</h1>
-
-		<!-- Timer -->
-		<h1 id="timer_line">Time Remaining: <div id="timer_number">45 Seconds</div>
+		<h1 id="timer">
 		</h1>
-
 		<!-- Correct answers values are 2,0,1,1,3,1,3 -->
 		<h1>What is the dominant grape in Chianti wines?</h1>
 		<input type="radio" name="wine1" value="0">Cabernet Sauvignon
@@ -66,7 +64,7 @@
 		<br>
 		<button id="doneButton">Done!</button>
 	</div>
-	<!-- End of the game -->
+
 	<div id="container3">
 		<h1 class="title">Everything happens for a Riesling...</h1>
 		<h1 id="done"></h1>

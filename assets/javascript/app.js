@@ -2,9 +2,11 @@
 var correctAnswer = 0;
 var incorrectAnswer = 0;
 var unansweredCount = 0;
-// to start question timer at 30 seconds
-var countdownStart = 10;
-
+// to start question timer at 120 seconds
+var countdownStart = 120;
+// creates an 'audio' element that stores a song in it to be called later
+var gameAudio = document.createElement("audio");
+    gameAudio.setAttribute("src", "assets/redredwine.mp3");
 // Hides the divs on global level before start button is pressed
 $("#container2").hide();
 $("#container3").hide();
@@ -16,6 +18,8 @@ $("#startButton").on("click", function(){
 	$("#container2").show();
 	// to be defined next
 	startTimer();
+	// plays an mp3 that is stored in gameAudio
+	gameAudio.play();
 	});
 
 // defines start timer, decrement rate is 1 second
@@ -129,6 +133,8 @@ function countdown(){
 		$('#correct').html('Correct Answers: ' + correctAnswer);
 		$('#incorrect').html('Incorrect Answers: ' + incorrectAnswer);
 		$('#unanswered').html('Unanswered Questions: ' + unansweredCount);
+		// scrolls back to top of page once answers are displayed
+		$(this).scrollTop(50);
 	};
 
 

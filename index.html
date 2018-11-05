@@ -1,79 +1,92 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
 	<title>Wine Trivia - Test Your Knowledge!</title>
-	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <!-- made three containers: one for the start, another for displaying the questions and a third for displaying the results -->
+	<!-- made three containers: one for the start, another for displaying the questions and a third for displaying the results -->
 	<div id="container1">
-		<h1 class="title">Wine Trivia - Test Your Knowledge!</h1>
+		<h1 class="title">Wine Trivia!</h1>
 		<button id="startButton">Start</button>
 	</div>
 
 	<div id="container2">
-		<h1 class="title">Answer the wine related questions in the alloted time!</h1>
-		<h1 id="timer">
+		<h1 class="title1">Answer the wine related questions!</h1>
+		<h1 id="timer">Time Remaining: 120 seconds
 		</h1>
 		<!-- Correct answers values are 2,0,1,1,3,1,3 -->
-		<h1>What is the dominant grape in Chianti wines?</h1>
-		<input type="radio" name="wine1" value="0">Cabernet Sauvignon
-		<input type="radio" name="wine1" value="1">Nebbiolo
-		<input type="radio" name="wine1" value="2">Sangiovese
-		<input type="radio" name="wine1" value="3">Tempranillo
+		<h1 class="questions">What is the dominant grape in Chianti?</h1>
+		<div class="answers">
+			<input type="radio" name="wine1" value="0">Cabernet Sauvignon
+			<br>
+			<input type="radio" name="wine1" value="1">Nebbiolo
+			<br>
+			<input type="radio" name="wine1" value="2">Sangiovese
+			<br>
+			<input type="radio" name="wine1" value="3">Tempranillo
+		</div>
+		<h1 class="questions">What does appellation refer to in France?</h1>
+		<div class="answers">
+			<input type="radio" name="wine2" value="0">Place of origin
+			<br><input type="radio" name="wine2" value="1">Wines with an apple flavor
+			<br><input type="radio" name="wine2" value="2">Year the wine was made
+			<br><input type="radio" name="wine2" value="3">Wines from the mountains
+		</div>
+		<h1 class="questions">Reducing the grape crop usually does what for wine?</h1>
+		<div class="answers">
+			<input type="radio" name="wine3" value="0">Lowers the alcohol level
+			<br><input type="radio" name="wine3" value="1">Intensifies the flavor
+			<br><input type="radio" name="wine3" value="2">Lowers the price
+			<br><input type="radio" name="wine3" value="3">Dilutes the fruit qualities
+		</div>
+		<h1 class="questions">Why are red wines usually aged in oak barrels?</h1>
+		<div class="answers">
+			<input type="radio" name="wine4" value="0">Stainless steel tanks spoil wine
+			<br><input type="radio" name="wine4" value="1">To improve the wine's ability to age
+			<br><input type="radio" name="wine4" value="2">Oak barrels are cheaper
+			<br><input type="radio" name="wine4" value="3">To greatly improve the color
+		</div>
+		<h1 class="questions">What can salty foods do to tannic wine?</h1>
+		<div class="answers">
+			<input type="radio" name="wine5" value="0">Diminish the tannins
+			<br><input type="radio" name="wine5" value="1">Enhance the acidity
+			<br><input type="radio" name="wine5" value="2">Make the wine seem sweet
+			<br><input type="radio" name="wine5" value="3">Make the wine seem even more tannic
+		</div>
 
-		<h1>What does appellation refer to in France?</h1>
-		<input type="radio" name="wine2" value="0">Place of origin
-		<input type="radio" name="wine2" value="1">Wines with an apple flavor
-		<input type="radio" name="wine2" value="2">Year the wine was made
-		<input type="radio" name="wine2" value="3">Wines from the mountains
+		<h1 class="questions">If a wine is 'hot' it most likely means what?</h1>
+		<div class="answers">
+			<input type="radio" name="wine6" value="0">Was harvested during Summer
+			<br><input type="radio" name="wine6" value="1">Has too high an alcohol content
+			<br><input type="radio" name="wine6" value="2">Is served warmer than room temp
+			<br><input type="radio" name="wine6" value="3">Is spicy
+		</div>
 
-		<h1>Reducing the grape crop usually does what for the resulting wines?</h1>
-		<input type="radio" name="wine3" value="0">Lowers the alcohol level
-		<input type="radio" name="wine3" value="1">Intensifies the flavor
-		<input type="radio" name="wine3" value="2">Lowers the price
-		<input type="radio" name="wine3" value="3">Dilutes the fruit qualities
-
-		<h1>Why are red wines usually aged in oak barrels?</h1>
-		<input type="radio" name="wine4" value="0">Stainless steel tanks spoil wine
-		<input type="radio" name="wine4" value="1">To improve the wine's ability to age
-		<input type="radio" name="wine4" value="2">Oak barrels are cheaper
-		<input type="radio" name="wine4" value="3">To greatly improve the color
-
-		<h1>What can salty foods do to tannic wine?</h1>
-		<input type="radio" name="wine5" value="0">Diminish the tannins
-		<input type="radio" name="wine5" value="1">Enhance the acidity
-		<input type="radio" name="wine5" value="2">Make the wine seem sweet
-		<input type="radio" name="wine5" value="3">Make the wine seem even more tannic
-
-		<h1>If a wine is described as hot it most likely means what?</h1>
-		<input type="radio" name="wine6" value="0">Was harvested during Summer
-		<input type="radio" name="wine6" value="1">Has too high an alcohol content
-		<input type="radio" name="wine6" value="2">Is served warmer than room temp
-		<input type="radio" name="wine6" value="3">Is spicy
-
-		<h1>By law, the word Reserve may only be placed on which US made wines?</h1>
-		<input type="radio" name="wine7" value="0">Rare vintages
-		<input type="radio" name="wine7" value="1">Wines aged in French Oak
-		<input type="radio" name="wine7" value="2">Wines aged at least 10 years
-		<input type="radio" name="wine7" value="3">Any wine
+		<h1 class="questions">The word Reserve may only be placed on which US wines?</h1>
+		<div class="answers">
+			<input type="radio" name="wine7" value="0">Rare vintages
+			<br><input type="radio" name="wine7" value="1">Wines aged in French Oak
+			<br><input type="radio" name="wine7" value="2">Wines aged at least 10 years
+			<br><input type="radio" name="wine7" value="3">Any wine
+		</div>
 		<br>
 		<button id="doneButton">Done!</button>
 	</div>
 
 	<div id="container3">
-		<h1 class="title">Everything happens for a Riesling...</h1>
-		<h1 id="done"></h1>
-		<h1 id="correct"></h1>
-		<h1 id="incorrect"></h1>
-		<h1 id="unanswered"></h1>
-		<img src="assets/images/wine7.png" alt="winewinner">
+		<h1 class="title1">Everything happens for a Riesling...</h1>
+		<h1 id="correct" class="title2"></h1>
+		<h1 id="incorrect" class="title2"></h1>
+		<h1 id="unanswered" class="title2"></h1>
+		<img src="assets/images/wine.png" alt="winewinner">
 	</div>
 
 	<script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
